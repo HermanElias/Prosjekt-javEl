@@ -1,7 +1,5 @@
 package no.hvl.dat100.javel.oppgave2;
 
-import no.hvl.dat100.javel.oppgave1.DailyPower;
-
 public class MonthlyPower {
 
     // a) print power usage for a month
@@ -49,7 +47,16 @@ for (int day = 0; day < prices.length; day++) {
 
         double sum = 0;
 
-        // TODO
+        
+for (int day = 0; day < usage.length; day++) {
+
+    for (int hour = 0; hour < usage[day].length; hour++) {
+
+        sum += usage[day][hour];
+
+    }
+}
+
 
         return sum;
     }
@@ -60,7 +67,27 @@ for (int day = 0; day < prices.length; day++) {
         boolean exceeded = false;
         double usage = 0;
 
-        // TODO
+        
+int day = 0;
+
+while (day < powerusage.length && !exceeded) {
+
+    int hour = 0;
+
+    while (hour < powerusage[day].length && !exceeded) {
+
+        usage += powerusage[day][hour];
+
+        if (usage > threshold) {
+            exceeded = true;
+        }
+
+        hour++;
+    }
+
+    day++;
+}
+
 
         return exceeded;
     }
