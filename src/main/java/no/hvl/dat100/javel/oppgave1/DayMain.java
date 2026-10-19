@@ -41,6 +41,8 @@ public class DayMain {
         System.out.println("1b");
         System.out.println("==");
         System.out.println();
+
+
         /*1b Test */
         DailyPower.printPowerUsage(powerusage_day);
         
@@ -59,6 +61,9 @@ public class DayMain {
         System.out.println("1c");
         System.out.println("==");
         System.out.println();
+
+        /*1c test */
+        
         
     }
 }
