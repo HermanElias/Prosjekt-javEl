@@ -38,7 +38,12 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for (int i = 0; i < usage.length; i++){
+         
+        price += prices[i]*usage[i];
+
+
+        }
 
         return price;
     }
@@ -51,7 +56,9 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
+        if (price > THRESHOLD) { 
+            support = ((price - THRESHOLD) * usage * PERCENTAGE); 
+        }
 
         return support;
     }
@@ -60,9 +67,11 @@ public class DailyPower {
     public static double computePowerSupport(double[] usage, double[] prices) {
 
         double support = 0;
+        
+        for (int i = 0; i < usage.length; i++) {
 
-        // TODO
-
+        support += getSupport(usage[i] , prices[i]);
+        }
         return support;
     }
 
