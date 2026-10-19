@@ -24,5 +24,15 @@ public class DayMain {
          Remember to also to check that you get the expected results
          */
 
+        /*Test av oppgave 1 a */
+        DailyPower.printPowerPrices(powerprices_day);
+        if (powerprices_day.length == 24) {
+            System.out.println("Test godkjent");
+        
+        }
+        else {
+            System.out.println("Test feilet");
+        }
+
     }
 }
