@@ -14,7 +14,10 @@ public class DailyPower {
     // b) print power usage during a day
     public static void printPowerUsage(double[] usage) {
 
-        // TODO
+        for(int i = 0; i < usage.length; i++) { 
+            System.out.printf("%.2f kWh " , usage[i]);
+        }
+        
 
     }
 
@@ -23,7 +26,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for (int i = 0; i < usage.length; i++) {
+            sum += usage[i];
+        }
 
         return sum;
     }
