@@ -66,13 +66,42 @@ public class DayMain {
         
             
         double sum = DailyPower.computePowerUsage(powerusage_day);
+        
         if (Math.abs(sum - 27.68) < 0.000001){
+            System.out.print(sum + " kWd ");
             System.out.println("test godkjent");
         }
 
         else {
             System.out.println("Feil i test" + sum);
         }
+        System.out.println();
+        
+        System.out.println("==");
+        System.out.println("1d");
+        System.out.println("==");
+        System.out.println();
+
+/*test 1d */
+
+        double forventet = 0;
+        for (int i = 0; i <powerusage_day.length; i++){
+            
+            forventet += powerusage_day[i] * powerprices_day[i];
+        }
+
+        double priser = DailyPower.computeSpotPrice(powerusage_day, powerprices_day);
+        if (Math.abs(priser - forventet) <  0.000001) {
+            System.out.println(priser + " NOK dagen ");
+            System.out.println("Test godkjent");
+            
+        }
+
+        else{
+            System.out.println("Feil test " + priser);
+        }
+
+//TODO - test fra e og videre
     }
         
 }
