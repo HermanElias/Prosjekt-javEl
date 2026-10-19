@@ -17,7 +17,7 @@ public class DayMain {
         System.out.println();
 
         /*
-        TODO
+        
 
          Write code that tests the methods you implement in the DailyPower class
          Remember to teste the methods as you implement them
@@ -64,6 +64,16 @@ public class DayMain {
 
         /*1c test */
         
-        
+            
+        double sum = DailyPower.computePowerUsage(powerusage_day);
+        if (Math.abs(sum - 27.68) < 0.000001){
+            System.out.println("test godkjent");
+        }
+
+        else {
+            System.out.println("Feil i test" + sum);
+        }
     }
+        
 }
+
