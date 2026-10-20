@@ -81,8 +81,11 @@ public class DailyPower {
     public static double computeNorgesPrice(double[] usage) {
 
         double price = 0;
+        for (int i = 0; i < usage.length; i++){
+            price += (NORGESPRIS_KWH * usage[i]);
+        }
 
-        // TODO
+        
 
         return price;
     }
@@ -92,7 +95,12 @@ public class DailyPower {
 
         double temp_max = 0;
 
-        // TODO
+        for (int i= 0; i < usage.length; i++) {
+
+            if (usage[i] > temp_max) {
+                temp_max = usage[i];
+            }
+        }
 
         return temp_max;
     }
@@ -100,8 +108,13 @@ public class DailyPower {
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
+        
+        for (int i= 0; i < usage.length; i++) {
 
-        // TODO
+            average += usage[i];
+        }
+        average /= usage.length; 
+        
 
         return average;
     }
