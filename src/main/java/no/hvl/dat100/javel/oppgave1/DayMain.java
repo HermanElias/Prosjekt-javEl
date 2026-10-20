@@ -221,7 +221,6 @@ System.out.println();
 
         double gjennomsnitt = DailyPower.findAvgPower(powerusage_day);
         
-        System.out.println("Nøyaktig gjennomsnitt: " + gjennomsnitt);
 
         double forventetsnitt = 27.68/24; 
         /* stjeler tallet for sum fra 1c */
