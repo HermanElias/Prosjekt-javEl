@@ -97,7 +97,16 @@ while (day < powerusage.length && !exceeded) {
 
         double price = 0;
 
-        // TODO
+        
+for (int day = 0; day < usage.length; day++) {
+
+    for (int hour = 0; hour < usage[day].length; hour++) {
+
+        price += usage[day][hour] * prices[day][hour];
+
+    }
+}
+
 
         return price;
     }
@@ -107,7 +116,21 @@ while (day < powerusage.length && !exceeded) {
 
         double support = 0;
 
-        // TODO
+        
+for (int day = 0; day < usage.length; day++) {
+
+    for (int hour = 0; hour < usage[day].length; hour++) {
+
+        if (prices[day][hour] > 0.9375) {
+
+            support += usage[day][hour]
+                    * (prices[day][hour] - 0.9375)
+                    * 0.90;
+
+        }
+    }
+}
+
 
         return support;
     }
@@ -117,7 +140,16 @@ while (day < powerusage.length && !exceeded) {
 
         double price = 0;
 
-        // TODO
+        
+for (double[] day : usage) {
+
+    for (double hour : day) {
+
+        price += hour * 0.50;
+
+    }
+}
+
 
         return price;
     }
