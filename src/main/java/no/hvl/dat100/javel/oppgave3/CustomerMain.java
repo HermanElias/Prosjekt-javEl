@@ -9,11 +9,27 @@ public class CustomerMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
+        
+Customer customer = new Customer(
+        "Alice Smith",
+        "alice@example.com",
+        1001,
+        PowerAgreementType.SPOTPRICE
+);
 
-         Write code that creates a Customer object and teste the methods implemented in the class
+System.out.println(customer.toString());
 
-        */
+System.out.println(customer.getName());
+System.out.println(customer.getEmail());
+System.out.println(customer.getCustomer_id());
+System.out.println(customer.getAgreement());
+
+customer.setName("Bob Smith");
+customer.setEmail("bob@example.com");
+customer.setCustomer_id(1002);
+customer.setAgreement(PowerAgreementType.NORGESPRICE);
+
+System.out.println(customer.toString());
+
     }
 }
